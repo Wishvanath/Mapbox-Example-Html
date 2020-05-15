@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Add a GeoJSON polygon</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoid2lzaHZhbmF0aCIsImEiOiJjanAzanN6ZjMwaDh2M3FwaHN5YTFtZG5oIn0.viPbBiupba0RbN92T-cxbA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g',
+    center: [78.9629,20.5937],
+    zoom: 5
+});
+
+map.on('load', function () {
+
+    map.addLayer({
+        'id': 'maine',
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2723388671875,
+              21.12549763660628
+            ],
+            [
+              77.14050292968749,
+              20.96656916027155
+            ],
+            [
+              77.1514892578125,
+              20.802336592979056
+            ],
+            [
+              77.2723388671875,
+              20.679044609010408
+            ],
+            [
+              77.43713378906249,
+              20.607077970830293
+            ],
+            [
+              77.54150390625,
+              20.627643341686756
+            ],
+            [
+              77.7447509765625,
+              20.684183779352395
+            ],
+            [
+              77.816162109375,
+              20.7663868125152
+            ],
+            [
+              77.82714843749999,
+              20.894739516479788
+            ],
+            [
+              77.82714843749999,
+              20.940919670394646
+            ],
+            [
+              77.794189453125,
+              21.089625396733936
+            ],
+            [
+              77.7392578125,
+              21.120373561794867
+            ],
+            [
+              77.5634765625,
+              21.140868798573802
+            ],
+            [
+              77.442626953125,
+              21.140868798573802
+            ],
+            [
+              77.2723388671875,
+              21.12549763660628
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.211669921875,
+              20.833143872039916
+            ],
+            [
+              78.1292724609375,
+              20.571081893508193
+            ],
+            [
+              78.233642578125,
+              20.390974413170618
+            ],
+            [
+              78.4918212890625,
+              20.354927584117682
+            ],
+            [
+              78.64562988281249,
+              20.406420474920292
+            ],
+            [
+              78.8433837890625,
+              20.627643341686756
+            ],
+            [
+              78.81591796875,
+              20.745840238902257
+            ],
+            [
+              78.211669921875,
+              20.833143872039916
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+
+            }
+        },
+        'layout': {},
+        'paint': {
+            'fill-color': '#088',
+            'fill-opacity': 0.8
+        }
+    });
+});
+</script>
+
+</body>
+</html>
